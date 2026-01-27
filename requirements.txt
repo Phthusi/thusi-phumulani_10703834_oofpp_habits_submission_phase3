@@ -1,0 +1,10 @@
+
+# Third-party dependencies required by the habit_tracker application.
+# Install with: pip install -r requirements.txt
+
+# Color output in terminals (required on Windows/macOS/Linux)
+colorama>=0.4.6
+
+# Interactive prompt toolkit used for input autocompletion and history
+prompt_toolkit>=3.0.36
+
