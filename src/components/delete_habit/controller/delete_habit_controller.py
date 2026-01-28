@@ -1,6 +1,6 @@
-from src.services.habit_factory import HabitFactory, Habit
-from src.components.get_habit.view.get_habit_view import GetHabitView
-from src.services.inputs import command_loop
+from services.habit_factory import HabitFactory, Habit
+from components.get_habit.view.get_habit_view import GetHabitView
+from services.inputs import command_loop
 
 
 class DeleteHabitController:

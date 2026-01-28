@@ -1,6 +1,6 @@
-from src.components.add_habit.view.add_habit_view import AddHabitView
-from src.services.habit_factory import HabitFactory, Habit
-from src.services.handle_time import DateTimeHandler
+from components.add_habit.view.add_habit_view import AddHabitView
+from services.habit_factory import HabitFactory, Habit
+from services.handle_time import DateTimeHandler
 
 
 class AddHabitController:

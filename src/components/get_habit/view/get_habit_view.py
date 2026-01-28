@@ -1,5 +1,5 @@
-from src.services.colors import Colors
-from src.services.inputs import (
+from services.colors import Colors
+from services.inputs import (
     command_loop,
     run_until_successful,
     command_once,
@@ -8,7 +8,7 @@ from src.services.inputs import (
     unsuccessful,
     successful
 )
-from src.components.search_habit.controller.search_habit_controller import (
+from components.search_habit.controller.search_habit_controller import (
     SearchHabit,
     HabitFactory
 )

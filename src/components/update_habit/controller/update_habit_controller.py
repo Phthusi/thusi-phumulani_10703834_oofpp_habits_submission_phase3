@@ -1,9 +1,9 @@
-from src.services.habit_factory import HabitFactory
-from src.components.get_habit.view.get_habit_view import GetHabitView
-from src.components.update_habit.view.update_habit_view import UpdateHabitView
-from src.services.handle_time import DateTimeHandler
-from src.services.inputs import command_loop
-from src.components.search_habit.controller.search_habit_controller import SearchHabit
+from services.habit_factory import HabitFactory
+from components.get_habit.view.get_habit_view import GetHabitView
+from components.update_habit.view.update_habit_view import UpdateHabitView
+from services.handle_time import DateTimeHandler
+from services.inputs import command_loop
+from components.search_habit.controller.search_habit_controller import SearchHabit
 
 
 class UpdateHabitController:

@@ -1,5 +1,5 @@
-from src.data.database_interface import DatabaseInterface
-from src.models.habit import Habit
+from data.database_interface import DatabaseInterface
+from models.habit import Habit
 
 class HabitFactory:
     """

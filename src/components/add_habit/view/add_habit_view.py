@@ -1,8 +1,8 @@
-from src.services.colors import Colors
-from src.services.handle_time import DateTimeHandler
-from src.services.inputs import command_loop,run_until_successful,command_once,prompt_input_for_commands,display_habit, unsuccessful
+from services.colors import Colors
+from services.handle_time import DateTimeHandler
+from services.inputs import command_loop,run_until_successful,command_once,prompt_input_for_commands,display_habit, unsuccessful
 # from src.services.read_json import read_json_files
-from src.components.habit_time_repeats.view.habit_time_repeats_view import HabitTimeRepeatsView
+from components.habit_time_repeats.view.habit_time_repeats_view import HabitTimeRepeatsView
 
 class AddHabitView:
     """

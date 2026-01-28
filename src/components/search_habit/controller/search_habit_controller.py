@@ -1,4 +1,4 @@
-from src.services.habit_factory import HabitFactory, Habit
+from services.habit_factory import HabitFactory, Habit
 
 class SearchHabit:
     """

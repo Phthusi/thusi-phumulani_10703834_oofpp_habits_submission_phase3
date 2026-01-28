@@ -8,10 +8,10 @@ string. Equality and representation helpers are provided to make instances
 easy to compare in tests.
 """
 
-from src.models.status import HabitStatus
-from src.models.content import HabitContent
-from src.data.database_interface import DatabaseInterface
-from src.services.handle_time import DateTimeHandler
+from models.status import HabitStatus
+from models.content import HabitContent
+from data.database_interface import DatabaseInterface
+from services.handle_time import DateTimeHandler
 
 class Habit:
     """Data model for a habit.

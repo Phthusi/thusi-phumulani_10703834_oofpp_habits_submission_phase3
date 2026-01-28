@@ -18,8 +18,8 @@ This file only contains presentation and interaction logic; it does not
 perform database operations.
 """
 
-from src.services.colors import Colors
-from src.services.inputs import command_loop,run_until_successful,command_once,prompt_input_for_commands,display_habit, unsuccessful
+from services.colors import Colors
+from services.inputs import command_loop,run_until_successful,command_once,prompt_input_for_commands,display_habit, unsuccessful
 
 
 class HabitTimeRepeatsView:

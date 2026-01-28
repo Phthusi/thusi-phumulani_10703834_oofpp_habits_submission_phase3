@@ -1,8 +1,9 @@
-from src.components.add_habit.controller import add_habit_controller
-from src.components.delete_habit.controller import delete_habit_controller
-from src.components.update_habit.controller import update_habit_controller
-from src.components.get_habit.view import get_habit_view
-from src.services.inputs import command_loop
+from components.add_habit.controller import add_habit_controller
+from components.delete_habit.controller import delete_habit_controller
+from components.update_habit.controller import update_habit_controller
+from components.get_habit.view import get_habit_view
+from services.inputs import command_loop
+
 add_habit = add_habit_controller.AddHabitController()
 update_habit = update_habit_controller.UpdateHabitController()
 get_habit = get_habit_view.GetHabitView()

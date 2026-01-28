@@ -12,9 +12,9 @@ returning tuples in the form (value, message, success) when they participate
 in the decorated command flows.
 """
 
-from src.services.colors import Colors
-from src.components.add_habit.view.add_habit_view import AddHabitView
-from src.services.inputs import (
+from services.colors import Colors
+from components.add_habit.view.add_habit_view import AddHabitView
+from services.inputs import (
     command_loop,
     run_until_successful,
     command_once,

@@ -1,4 +1,4 @@
-from src.data.database import Database
+from data.database import Database
 
 class DatabaseInterface:
     """

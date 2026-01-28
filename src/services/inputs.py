@@ -1,6 +1,6 @@
 import time
-from src.services.colors import Colors
-from src.services.word_prediction import AutoCompleter
+from services.colors import Colors
+from services.word_prediction import AutoCompleter
 import functools
 import os
 
