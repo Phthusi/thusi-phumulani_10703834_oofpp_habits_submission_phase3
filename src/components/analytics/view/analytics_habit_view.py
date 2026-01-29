@@ -47,6 +47,8 @@ class HabitAnalytics:
             habit_name: self.longest_streak(self.habit_factory.get_name_with_text(habit_name))
             for habit_name in habit_names
         }
+        if len(habit_names_long_streaks) == 0: return "0%"
+
         highest_streak = max(habit_names_long_streaks.values())
         habits = [name for name in habit_names_long_streaks.keys() if highest_streak==habit_names_long_streaks.get(name)]
         return habits
