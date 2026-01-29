@@ -66,7 +66,7 @@ Steps:
 
 Gif:
 
-![Delete Habit](./gifs/delete_habit.gif)
+![Delete Habit](../docs/media/delete_habit/delete_habit_entry.gif)
 
 ---
 

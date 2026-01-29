@@ -37,9 +37,6 @@ The component handles:
 3. Component queries the database and returns results.
 4. Results can be displayed in the CLI.
 
-Gif example:
-
-![Search Flow](./gifs/search_habit_flow.gif)
 
 ---
 
@@ -47,11 +44,11 @@ Gif example:
 
 | Method                              | Description                                            | Gif                                          |
 | ----------------------------------- | ------------------------------------------------------ | -------------------------------------------- |
-| `search_by_name(name)`              | Returns a habit with exact name or similar match       | ![Search Name](./gifs/search_name.gif)       |
-| `search_by_status(status)`          | Returns all habits with a given status                 | ![Search Status](./gifs/search_status.gif)   |
-| `search_by_content(content)`        | Returns habits where description or reflection matches | ![Search Content](./gifs/search_content.gif) |
-| `search_by_date(date)`              | Returns habits starting on a specific date             | ![Search Date](./gifs/search_date.gif)       |
-| `search_by_month(month, year=None)` | Returns habits in a given month (optionally year)      | ![Search Month](./gifs/search_month.gif)     |
+| `search_by_name(name)`              | Returns a habit with exact name or similar match       | ![Search Name](./media/search_habit/search_habit_by_name.gif)       |
+| `search_by_status(status)`          | Returns all habits with a given status                 | ![Search Status](./media/search_habit/search_habits_by_status.gif)   |
+| `search_by_content(content)`        | Returns habits where description or reflection matches | ![Search Content](./media/search_habit/search_habit_by_content.gif) |
+| `search_by_date(date)`              | Returns habits starting on a specific date             | ![Search Date](./media/search_habit/search_habit_by_date.gif)       |
+| `search_by_month(month, year=None)` | Returns habits in a given month (optionally year)      | ![Search Month](./media/search_habit/search_habit_by_month.gif)     |
 
 ---
 
@@ -61,9 +58,6 @@ Gif example:
 * Each method validates internally and queries the database.
 * Results are returned as a list of tuples.
 
-Gif:
-
-![Search Input Pattern](./gifs/search_input_pattern.gif)
 
 ---
 
@@ -84,8 +78,3 @@ if __name__ == '__main__':
     results = search.search_by_status('UPCOMING')
     print(results)
 ```
-
-Gif example:
-
-![Search Habit Entry](./gifs/search_habit_entry.gif)
-
