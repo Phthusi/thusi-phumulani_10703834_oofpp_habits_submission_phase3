@@ -194,7 +194,10 @@ class GetHabitView:
         """
         message = "Enter characters in habit name: "
         def validator(cmd):
-            return "", (len(cmd) >= 3, "Name must have more than 2 characters"), False
+            if len(cmd) <= 2:
+                return "", (len(cmd) <= 2, "Name must have more than 2 characters"), False
+            print(cmd)
+            return "", (len(cmd) >= 3, "Success..."), True
 
         return self._simple_search(
             message,
@@ -213,7 +216,9 @@ class GetHabitView:
         """
         message = "Enter characters in habit content: "
         def validator(cmd):
-            return (len(cmd) >= 3, "Content must have more than 2 characters")
+            if len(cmd) <= 2:
+                return "", (len(cmd) <= 2, "Name must have more than 2 characters"), False
+            return "", (len(cmd) >= 3, "Success..."), True
 
         return self._simple_search(
             message,
