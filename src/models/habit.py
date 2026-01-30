@@ -63,12 +63,12 @@ class Habit:
         'HH:MM' and returns a string formatted as 'YYYY-MM-DD, HH:MM'. This
         string is compatible with the project's DateTimeHandler input.
         """
-        year,time = str(datetime).split(' ')
+        year,time = str(datetime).replace(',','').split(' ')
         time_split = time.split(':')
         
         if len(time_split) == 3:
             time = ':'.join([str(time_split[0]),str(time_split[1])])
-        
+        print(year)
         year,month,day= year.split('-')
         return f'{year}-{month}-{day}, {time}'
     

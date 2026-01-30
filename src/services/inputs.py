@@ -83,6 +83,7 @@ def command_loop(commands, break_on=None,switched_to="X"):
     """
     break_on = break_on or ['done']
     cleared_screen = False
+    print('entered here')
     while True:
         # cleared_screen or successful("Switched to: "+switched_to+" console")
         
@@ -106,13 +107,65 @@ def command_loop(commands, break_on=None,switched_to="X"):
 
             if command in break_on:
                 break
+            
+            if command!="esc":
+                cleared_screen = False
+                continue
+
         else:
             unsuccessful(f"'{command}' is not a valid command")
             cleared_screen = True
             continue
 
-        cleared_screen = False
+        cleared_screen = True
         
+class ManageMainLoop:
+    """
+    Manages the main command loop with status handling.
+    """
+    consoles = []
+    length_of_consoles = 0
+
+    def __init__(self):
+        self.cleared_screen = False
+
+    def command_loop(self, commands, break_on=None, switched_to="X"):
+        break_on = break_on or ['done']
+        ManageMainLoop.consoles.append(switched_to)
+        while True:
+            if len(ManageMainLoop.consoles)!=ManageMainLoop.length_of_consoles:
+                successful("Switched to: "+switched_to+" console")
+                ManageMainLoop.length_of_consoles = len(ManageMainLoop.consoles)
+
+            command = prompt_input(
+                color.color_inputs("Enter command: "),
+                [*commands.keys(),'esc',"get current console"]
+            )
+
+            if command == "esc":
+                ManageMainLoop.consoles.pop()
+                break
+
+            if command == "get current console":
+                successful("Current console: "+str(ManageMainLoop.consoles[-1]))
+                continue
+
+            if command == "clear_screen":
+                clear_screen()
+                continue
+
+            if command in commands:
+                result = commands[command]()
+                
+                if result=='done':
+                    command = result
+
+                if command in break_on:
+                    break
+                
+            else:
+                unsuccessful(f"'{command}' is not a valid command")
+
 
 def command_once(function):
     """

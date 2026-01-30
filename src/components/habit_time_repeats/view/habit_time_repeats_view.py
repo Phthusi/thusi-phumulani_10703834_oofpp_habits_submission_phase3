@@ -19,7 +19,7 @@ perform database operations.
 """
 
 from services.colors import Colors
-from services.inputs import command_loop,run_until_successful,command_once,prompt_input_for_commands,display_habit, unsuccessful
+from services.inputs import ManageMainLoop,run_until_successful,command_once,prompt_input_for_commands,display_habit, unsuccessful
 
 
 class HabitTimeRepeatsView:
@@ -457,7 +457,7 @@ class HabitTimeRepeatsView:
             "view month pattern": self.display_month_pattern,
             "order month patterns": self.order_month_patterns_handler
         }
-        command_loop(commands,switched_to="habit time repeat")     
+        ManageMainLoop().command_loop(commands,switched_to="habit time repeat")     
 
 if __name__=="__main__":
     x = HabitTimeRepeatsView()

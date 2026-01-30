@@ -2,7 +2,7 @@ from services.habit_factory import HabitFactory
 from components.get_habit.view.get_habit_view import GetHabitView
 from components.update_habit.view.update_habit_view import UpdateHabitView
 from services.handle_time import DateTimeHandler
-from services.inputs import command_loop
+from services.inputs import ManageMainLoop
 from components.search_habit.controller.search_habit_controller import SearchHabit
 
 
@@ -96,7 +96,7 @@ class UpdateHabitController:
             'update habit': self.update_habit,
             'complete task(s)': self.complete_tasks
         }
-        command_loop(commands, switched_to="update habit")
+        ManageMainLoop().command_loop(commands, switched_to="update habit")
 
 
 if __name__ == "__main__":

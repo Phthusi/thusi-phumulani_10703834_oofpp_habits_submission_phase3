@@ -2,7 +2,7 @@ from components.add_habit.controller import add_habit_controller
 from components.delete_habit.controller import delete_habit_controller
 from components.update_habit.controller import update_habit_controller
 from components.get_habit.view import get_habit_view
-from services.inputs import command_loop
+from services.inputs import ManageMainLoop
 
 add_habit = add_habit_controller.AddHabitController()
 update_habit = update_habit_controller.UpdateHabitController()
@@ -32,7 +32,7 @@ r"""
 )
 
 update_habit.update_statuses()
-command_loop(commands,switched_to="home")
+ManageMainLoop().command_loop(commands,switched_to="home")
 
 print(r"""
 ===========================================================================================================

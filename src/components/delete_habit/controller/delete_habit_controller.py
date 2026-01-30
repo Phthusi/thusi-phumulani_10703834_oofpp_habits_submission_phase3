@@ -1,6 +1,6 @@
 from services.habit_factory import HabitFactory, Habit
 from components.get_habit.view.get_habit_view import GetHabitView
-from services.inputs import command_loop
+from services.inputs import ManageMainLoop
 
 
 class DeleteHabitController:
@@ -66,7 +66,7 @@ class DeleteHabitController:
             'use get commands': self.get_habit_view.get_habit,
             'delete': self.delete
         }
-        command_loop(commands, switched_to="delete habit")
+        ManageMainLoop().command_loop(commands, switched_to="delete habit")
 
 
 if __name__ == "__main__":

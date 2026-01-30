@@ -15,7 +15,6 @@ in the decorated command flows.
 from services.colors import Colors
 from components.add_habit.view.add_habit_view import AddHabitView
 from services.inputs import (
-    command_loop,
     run_until_successful,
     command_once,
     prompt_input_for_commands,

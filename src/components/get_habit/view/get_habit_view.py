@@ -1,13 +1,14 @@
 # from services.colors import Colors
 from services.colors import Colors
 from services.inputs import (
-    command_loop,
+    ManageMainLoop,
     run_until_successful,
     command_once,
     prompt_input_for_commands,
     display_habit,
     unsuccessful,
-    successful
+    successful,
+    ManageMainLoop
 )
 from components.search_habit.controller.search_habit_controller import (
     SearchHabit,
@@ -167,6 +168,7 @@ class GetHabitView:
         command = prompt_input_for_commands(prompt_msg)
 
         if command == "esc":
+            ManageMainLoop.consoles.pop()
             return command, "", True
 
         if command == "clear_screen":
@@ -240,6 +242,7 @@ class GetHabitView:
         command = prompt_input_for_commands(message)
 
         if command == "esc":
+            ManageMainLoop.consoles.pop()
             return command, "", True
 
         status, results = self.search_habit.search_by_date(command)
@@ -271,6 +274,7 @@ class GetHabitView:
 
         command = prompt_input_for_commands(message, list(months.keys()))
         if command == "esc":
+            ManageMainLoop.consoles.pop()
             return command, "", True
 
         command = command.capitalize()
@@ -301,6 +305,7 @@ class GetHabitView:
         status = prompt_input_for_commands(message, statuses)
 
         if status == "esc":
+            ManageMainLoop.consoles.pop()
             return status, "", True
 
         if status.upper() not in statuses:
@@ -323,6 +328,7 @@ class GetHabitView:
         habit_id = prompt_input_for_commands(message)
 
         if habit_id == "esc":
+            ManageMainLoop.consoles.pop()
             return habit_id, "", True
 
         if not habit_id.isdigit():
@@ -366,6 +372,7 @@ class GetHabitView:
         )
 
         if habit_id == "esc":
+            ManageMainLoop.consoles.pop()
             return habit_id, "", True
 
         if not habit_id.isdigit():
@@ -408,7 +415,7 @@ is not an upcoming event, you can only modify an upcoming event""", False
             "search by habit month": self.search_by_month,
             "view habit information": self.view_habit_information
         }
-        command_loop(commands, commands.keys(),switched_to="view habits")
+        ManageMainLoop().command_loop(commands, commands.keys(),switched_to="view habits")
         return True
 
 if __name__ == "__main__":

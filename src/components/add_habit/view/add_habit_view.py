@@ -1,6 +1,6 @@
 from services.colors import Colors
 from services.handle_time import DateTimeHandler
-from services.inputs import command_loop,run_until_successful,command_once,prompt_input_for_commands,display_habit, unsuccessful
+from services.inputs import run_until_successful,command_once,prompt_input_for_commands,display_habit, unsuccessful, ManageMainLoop
 # from src.services.read_json import read_json_files
 from components.habit_time_repeats.view.habit_time_repeats_view import HabitTimeRepeatsView
 
@@ -390,8 +390,7 @@ class AddHabitView:
             'save habit': self.save_handler,
             'reset habit': self.reset,
         }
-        command_loop(commands,switched_to="add habit")
-        
+        ManageMainLoop().command_loop(commands,switched_to="add habit")
 
     # @command_once
     def execute(self):
