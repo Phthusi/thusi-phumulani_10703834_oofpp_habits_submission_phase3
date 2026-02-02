@@ -143,7 +143,9 @@ class ManageMainLoop:
             )
 
             if command == "esc":
-                ManageMainLoop.consoles.pop()
+                if not ManageMainLoop.consoles[-1]=="home":
+                    ManageMainLoop.consoles.pop()
+                # print(ManageMainLoop.consoles)
                 break
 
             if command == "get current console":

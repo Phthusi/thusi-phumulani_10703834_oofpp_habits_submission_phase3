@@ -399,6 +399,8 @@ is not an upcoming event, you can only modify an upcoming event""", False
         """
         self.search_results = self.habit_factory.get_habits()
         self.display_results()
+        ManageMainLoop.consoles.pop()
+
 
     def get_habit(self, method_name="delete"):
         """

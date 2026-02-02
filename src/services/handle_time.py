@@ -43,9 +43,7 @@ class DateTimeHandler:
                 - success False if invalid format or date is in the past.
         """
         try:
-            print(input_date)
             input_dt = datetime.strptime(str(input_date), "%Y-%m-%d, %H:%M")
-            print(input_dt)
             if input_dt <= datetime.now():
                 return "UNSUCCESSFUL: date has already passed", False
 
