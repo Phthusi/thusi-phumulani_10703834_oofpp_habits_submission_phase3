@@ -1,3 +1,5 @@
+>[To home](../content.md)
+
 # Search Habit Component
 
 ## Overview
@@ -78,3 +80,5 @@ if __name__ == '__main__':
     results = search.search_by_status('UPCOMING')
     print(results)
 ```
+
+[⬆ Back to top](#top)

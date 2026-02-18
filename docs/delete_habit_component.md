@@ -1,5 +1,6 @@
-# Delete Habit Component
+>[To home](../content.md)
 
+# Delete Habit Component
 ## Overview
 
 The **DeleteHabitController** component allows users to safely delete a habit from the database via the command-line interface.
@@ -85,3 +86,4 @@ if __name__ == "__main__":
     controller = DeleteHabitController()
     controller.execute()
 ```
+[⬆ Back to top](#top)

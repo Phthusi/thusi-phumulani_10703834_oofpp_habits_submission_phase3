@@ -19,7 +19,7 @@ class TestAnalytics(unittest.TestCase):
             (2,None,"A",None,None,"DONE"),
             (3,None,"A",None,None,"MISSED"),
         ]
-        self.assertEqual(analytics.completion_rate(habits), "66.66666666666666%")
+        self.assertEqual(analytics.completion_rate(habits), "66.66666666666666%, Missed=1, Done=2")
 
 if __name__ == "__main__":
     unittest.main()

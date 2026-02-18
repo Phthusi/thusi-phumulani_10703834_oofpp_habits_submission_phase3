@@ -1,3 +1,4 @@
+>[To home](../content.md)
 
 # Update Habit Component
 
@@ -152,3 +153,5 @@ Gif example:
 ![Update Habit Entry](./gifs/update_habit_entry.gif)
 
 ---
+
+[⬆ Back to top](#top)

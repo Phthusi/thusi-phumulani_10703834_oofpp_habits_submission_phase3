@@ -1,3 +1,5 @@
+>[To home](../content.md)
+
 # Habit Time Repeats Component
 
 ## Overview
@@ -164,3 +166,5 @@ if __name__=="__main__":
 Gif example:
 
 ![Habit Time Repeats Entry](./gifs/habit_time_repeats_entry.gif)
+
+[⬆ Back to top](#top)

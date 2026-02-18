@@ -1,4 +1,28 @@
+>[To home](../content.md)
+
 # Add Habit Component
+## Add Habit Content Table of Contents
+- [Add Habit Component](#add-habit-component)
+  - [Add Habit Content Table of Contents](#add-habit-content-table-of-contents)
+  - [Overview](#overview)
+  - [Responsibilities](#responsibilities)
+  - [Internal State](#internal-state)
+  - [High-Level Flow](#high-level-flow)
+  - [Command Loop](#command-loop)
+  - [Input Handling Pattern](#input-handling-pattern)
+  - [Field Input Methods](#field-input-methods)
+    - [Habit Name](#habit-name)
+    - [Start Date \& Time](#start-date--time)
+    - [Description](#description)
+    - [Session Duration](#session-duration)
+  - [Validation of Required Fields](#validation-of-required-fields)
+  - [Repeat Pattern Configuration](#repeat-pattern-configuration)
+  - [Saving the Habit](#saving-the-habit)
+  - [Displaying Habit Details](#displaying-habit-details)
+  - [Viewing Filled Fields](#viewing-filled-fields)
+  - [Resetting State](#resetting-state)
+  - [Design Notes](#design-notes)
+  - [Entry Point](#entry-point)
 
 ## Overview
 
@@ -283,3 +307,4 @@ if __name__ == "__main__":
     view = AddHabitView()
     view.execute()
 ```
+[⬆ Back to top](#top)
