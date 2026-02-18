@@ -1,9 +1,9 @@
 >[To home](../content.md)
 
 # Add Habit Component
-## Add Habit Content Table of Contents
+## Table of Contents
 - [Add Habit Component](#add-habit-component)
-  - [Add Habit Content Table of Contents](#add-habit-content-table-of-contents)
+  - [Table of Contents](#table-of-contents)
   - [Overview](#overview)
   - [Responsibilities](#responsibilities)
   - [Internal State](#internal-state)
@@ -23,7 +23,7 @@
   - [Resetting State](#resetting-state)
   - [Design Notes](#design-notes)
   - [Entry Point](#entry-point)
-
+  
 ## Overview
 
 The **AddHabitView** component is responsible for guiding the user through creating a new habit in the command-line interface.
