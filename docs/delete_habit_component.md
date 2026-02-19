@@ -1,6 +1,20 @@
 >[To home](../content.md)
 
 # Delete Habit Component
+
+## Table of Contents
+
+- [Delete Habit Component](#delete-habit-component)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Responsibilities](#responsibilities)
+  - [Internal State](#internal-state)
+  - [High-Level Flow](#high-level-flow)
+  - [Command Loop](#command-loop)
+  - [Deleting a Habit](#deleting-a-habit)
+  - [Design Notes](#design-notes)
+  - [Entry Point](#entry-point)
+
 ## Overview
 
 The **DeleteHabitController** component allows users to safely delete a habit from the database via the command-line interface.

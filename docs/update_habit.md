@@ -1,7 +1,20 @@
 >[To home](../content.md)
 
 # Update Habit Component
-
+## Table of Contents
+- [Update Habit Component](#update-habit-component)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Responsibilities](#responsibilities)
+  - [Internal State](#internal-state)
+  - [High-Level Flow](#high-level-flow)
+  - [Command Loop](#command-loop)
+  - [Updating Habits](#updating-habits)
+  - [Completing Tasks](#completing-tasks)
+  - [Status Updates](#status-updates)
+  - [Viewing Habits](#viewing-habits)
+  - [Design Notes](#design-notes)
+  - [Entry Point](#entry-point)
 ## Overview
 
 The **UpdateHabitController** component allows users to update, complete, and view habits in the command-line interface.

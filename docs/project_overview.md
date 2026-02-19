@@ -1,5 +1,21 @@
 >[To home](../content.md)
 
+## Table of Contents
+- [Habit Tracker Project Overview](#habit-tracker-project-overview)
+  - [Project Purpose](#project-purpose)
+  - [System Components](#system-components)
+  - [How the System Works](#how-the-system-works)
+    - [1. Creating Habits](#1-creating-habits)
+    - [2. Understanding Weeks and Months](#2-understanding-weeks-and-months)
+    - [3. Habit Status Updates](#3-habit-status-updates)
+    - [4. Completing Tasks](#4-completing-tasks)
+    - [5. Searching and Managing Habits](#5-searching-and-managing-habits)
+    - [6. Repeat Patterns \& Habit Time Repeats](#6-repeat-patterns--habit-time-repeats)
+    - [7. Data Persistence](#7-data-persistence)
+    - [8. Utility Components](#8-utility-components)
+    - [9. Example Flow (Add → Repeat → Status Update)](#9-example-flow-add--repeat--status-update)
+    - [10. Design Philosophy](#10-design-philosophy)
+
 # Habit Tracker Project Overview
 
 ## Project Purpose

@@ -1,6 +1,9 @@
 >[To home](../content.md)
 
 # Add Habit Component
+> Component Type: CLI View  
+> Architecture Layer: Presentation  
+> Related Controller: AddHabitController
 ## Table of Contents
 - [Add Habit Component](#add-habit-component)
   - [Table of Contents](#table-of-contents)
