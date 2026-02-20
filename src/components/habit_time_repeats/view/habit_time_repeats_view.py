@@ -133,7 +133,7 @@ class HabitTimeRepeatsView:
         Returns:
             tuple: (set_of_days_or_command, message, success)
         """
-        week_days = ["mon","tues","wed","thurs","fri","sat","sun"]
+        week_days = ["mon","tue","wed","thurs","fri","sat","sun"]
         command = prompt_input_for_commands(f"Enter the pattern of a week for the habit: e.g wed thurs fri\n💡{self.color.choose_brightness('DARKEN')+self.color.choose_color('WHITE')} Note that selecting an option doesn't include pressing enter, just press space afer highlighting the option",[*week_days,"everyday"])
         
         if command == 'esc':

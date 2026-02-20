@@ -37,28 +37,28 @@ class AddHabitController:
              ordered monthly and weekly patterns.
            - Store generated habits in the database.
         """
+        print('here')
         self.add_habit_view.execute()
         habit = ''
 
         # Create and save the base habit
-        if self.add_habit_view.save_called:
-            habit_name = self.add_habit_view.get_habit_name()
-            start_datetime = self.add_habit_view.get_start_datetime()
-            duration = self.add_habit_view.get_habit_duration()
-            description = self.add_habit_view.get_description()
-            description = "" if not description else description
+        habit_name = self.add_habit_view.get_habit_name()
+        start_datetime = self.add_habit_view.get_start_datetime()
+        duration = self.add_habit_view.get_habit_duration()
+        description = self.add_habit_view.get_description()
+        description = "" if not description else description
 
-            habit = Habit(habit_name, start_datetime, duration)
-            habit.content.set_description(description)
+        habit = Habit(habit_name, start_datetime, duration)
+        habit.content.set_description(description)
 
-            self.habit_factory.add_habit(habit)
+        # self.habit_factory.add_habit(habit)
 
         # Generate repeated habits if patterns were defined
-        if self.add_habit_view.save_called and self.add_habit_view.pattern_is_set:
+        if self.add_habit_view.save_called:
             for monthly_pattern in self.add_habit_view.habit_time_repeats_view.ordered_monthly_patterns:
                 for week_entry in monthly_pattern:
                     week_pattern = list(week_entry.values())[0]
-
+                    print("week begins--------------",week_pattern,habit.weekday())
                     # Iterate through a 7-day window per week pattern
                     for _ in range(7):
                         # Skip empty weeks
@@ -66,11 +66,13 @@ class AddHabitController:
                             habit.next_day(7)
                             break
 
-                        habit.next_day()
-
+                        print(habit.weekday(),week_pattern,habit.weekday() in week_pattern)
                         # Save habit only if weekday matches the pattern
                         if habit.weekday() in week_pattern:
                             self.habit_factory.add_habit(habit)
+                    
+                        habit.next_day()
+                    print('end week')
 
 
 if __name__ == '__main__':

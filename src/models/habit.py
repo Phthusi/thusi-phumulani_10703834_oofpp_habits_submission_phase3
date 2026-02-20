@@ -68,7 +68,6 @@ class Habit:
         
         if len(time_split) == 3:
             time = ':'.join([str(time_split[0]),str(time_split[1])])
-        print(year)
         year,month,day= year.split('-')
         return f'{year}-{month}-{day}, {time}'
     

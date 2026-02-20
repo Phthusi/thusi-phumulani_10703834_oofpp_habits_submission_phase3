@@ -83,7 +83,7 @@ def command_loop(commands, break_on=None,switched_to="X"):
     """
     break_on = break_on or ['done']
     cleared_screen = False
-    print('entered here')
+    # print('entered here')
     while True:
         # cleared_screen or successful("Switched to: "+switched_to+" console")
         

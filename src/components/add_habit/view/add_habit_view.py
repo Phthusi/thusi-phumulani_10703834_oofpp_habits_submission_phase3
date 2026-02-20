@@ -3,7 +3,7 @@ from services.handle_time import DateTimeHandler
 from services.inputs import run_until_successful,command_once,prompt_input_for_commands,display_habit, unsuccessful, ManageMainLoop
 # from src.services.read_json import read_json_files
 from components.habit_time_repeats.view.habit_time_repeats_view import HabitTimeRepeatsView
-
+from services.habit_factory import HabitFactory, Habit
 class AddHabitView:
     """
     CLI View responsible for creating and configuring a new habit.
@@ -305,6 +305,17 @@ class AddHabitView:
                 self.habit_time_repeats_view.execute()
                 return True
             case "no":
+                habit_name = self.get_habit_name()
+                start_datetime = self.get_start_datetime()
+                duration = self.get_habit_duration()
+                description = self.get_description()
+                description = "" if not description else description
+
+                habit = Habit(habit_name, start_datetime, duration)
+                habit.content.set_description(description)
+                habit_factory = HabitFactory()
+                habit_factory.add_habit(habit)
+
                 return True
             case _:
                 return False
